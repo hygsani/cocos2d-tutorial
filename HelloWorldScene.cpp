@@ -51,5 +51,18 @@ bool HelloWorld::init()
         return false;
     }
     
+    auto origin = Director::getInstance()->getVisibleOrigin();
+    auto winSize = Director::getInstance()->getVisibleSize();
+    
+    _monster = Sprite::create("monster copy.png");
+    
+    if (_monster == nullptr) {
+        problemLoading("monster copy.png not found.");
+    }
+    
+    _monster->setPosition(Vec2(winSize.width * 0.5, winSize.height * 0.5));
+    
+    this->addChild(_monster);
+    
     return true;
 }

@@ -27,6 +27,8 @@
 
 #include "cocos2d.h"
 
+using namespace cocos2d;
+
 class HelloWorld : public cocos2d::Scene
 {
 public:
@@ -39,6 +41,9 @@ public:
     
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);
+    
+private:
+    Sprite *_monster;
 };
 
 #endif // __HELLOWORLD_SCENE_H__
